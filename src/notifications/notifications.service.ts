@@ -282,8 +282,13 @@ export class NotificationsService {
     }
 
     const created: any[] = [];
+    const deliveredTargets = new Set<string>();
     for (const rule of rules) {
       if (this.isQuietNow(rule.quietHoursStart, rule.quietHoursEnd)) continue;
+
+      const recipient = this.recipientFor(rule, rule.user);
+      const targetKey = `${rule.channel}:${recipient || 'not-configured'}`;
+      if (deliveredTargets.has(targetKey)) continue;
 
       const dedupeKey = dto.dedupeKey || this.dedupeKey(dto);
       const duplicate = await this.isDuplicate(rule, dedupeKey);
@@ -297,13 +302,14 @@ export class NotificationsService {
           ruleId: rule.id,
           type: dto.type,
           channel: rule.channel,
-          recipient: this.recipientFor(rule, rule.user),
+          recipient,
           payload: dto.payload || {},
           dedupeKey,
         },
         include: { rule: true, service: true, incident: true },
       });
 
+      deliveredTargets.add(targetKey);
       created.push(await this.sendAndPersist(notification));
     }
 
