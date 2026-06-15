@@ -237,11 +237,11 @@ export class AuthService {
     const payload = { sub: user.id, email: user.email, role: user.role, name: user.name };
     const accessToken = await this.jwt.signAsync(payload, {
       secret: process.env.JWT_ACCESS_SECRET || 'dev_access',
-      expiresIn: process.env.JWT_ACCESS_TTL || '15m',
+      expiresIn: (process.env.JWT_ACCESS_TTL || '15m') as any,
     });
     const refreshToken = await this.jwt.signAsync(payload, {
       secret: process.env.JWT_REFRESH_SECRET || 'dev_refresh',
-      expiresIn: process.env.JWT_REFRESH_TTL || '30d',
+      expiresIn: (process.env.JWT_REFRESH_TTL || '30d') as any,
     });
 
     await this.prisma.refreshToken.create({
