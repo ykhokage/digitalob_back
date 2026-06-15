@@ -1,12 +1,14 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { AuditService } from '../audit/audit.service';
 import { PrismaService } from '../prisma/prisma.service';
+import { WorkerService } from '../worker/worker.service';
 
 @Injectable()
 export class ServicesService {
   constructor(
     private prisma: PrismaService,
     private audit: AuditService,
+    private worker: WorkerService,
   ) {}
 
   async findAll(q: any, user: any) {
@@ -205,6 +207,12 @@ export class ServicesService {
       metadata: { name: created.name, url: created.url },
     });
     return created;
+  }
+
+  async checkNow(id: string, user?: any) {
+    const service = await this.assertOwnedService(id, user);
+    await this.worker.checkService(service);
+    return this.findOne(id, user);
   }
 
   async update(id: string, dto: any, user?: any) {

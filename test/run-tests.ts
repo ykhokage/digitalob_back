@@ -179,7 +179,8 @@ async function testServicesListIsScopedToUser() {
     },
   };
   const audit: any = { record: async () => ({}) };
-  const service = new ServicesService(prisma, audit);
+  const worker: any = { checkService: async () => ({}) };
+  const service = new ServicesService(prisma, audit, worker);
 
   await service.findAll({ status: 'OK' }, { sub: 'user-1' });
 

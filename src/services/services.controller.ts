@@ -60,4 +60,9 @@ export class ServicesController {
     return this.service.toggleMonitoring(id, dto.enabled, user);
   }
 
+  @Post(':id/check')
+  checkNow(@Param('id') id: string, @CurrentUser() user: any) {
+    return this.service.checkNow(id, user);
+  }
+
 }
