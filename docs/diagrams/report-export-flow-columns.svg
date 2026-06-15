@@ -1,0 +1,128 @@
+<svg width="1120" height="520" viewBox="0 0 1120 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 1L9 5L1 9Z" fill="#2563EB"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 1L9 5L1 9Z" fill="#16A34A"/>
+    </marker>
+    <marker id="arrowViolet" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 1L9 5L1 9Z" fill="#7C3AED"/>
+    </marker>
+    <style>
+      .title {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        fill: #111827;
+      }
+      .text {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        fill: #4B5563;
+      }
+      .label {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        fill: #64748B;
+      }
+      .line-blue {
+        stroke: #2563EB;
+        stroke-width: 2.7;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        marker-end: url(#arrowBlue);
+      }
+      .line-green {
+        stroke: #16A34A;
+        stroke-width: 2.7;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        marker-end: url(#arrowGreen);
+      }
+      .line-violet {
+        stroke: #7C3AED;
+        stroke-width: 2.7;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        marker-end: url(#arrowViolet);
+      }
+      .icon {
+        stroke: #111827;
+        stroke-width: 2.3;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        fill: none;
+      }
+    </style>
+  </defs>
+
+  <rect width="1120" height="520" fill="#FFFFFF"/>
+
+  <g>
+    <rect x="60" y="190" width="230" height="140" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+    <rect x="60" y="190" width="8" height="140" rx="4" fill="#2563EB"/>
+    <text x="92" y="234" class="title">Пользователь</text>
+    <text x="92" y="268" class="text">выбирает период</text>
+    <text x="92" y="292" class="text">и формат отчета</text>
+    <text x="92" y="316" class="label">ВХОДНЫЕ ПАРАМЕТРЫ</text>
+  </g>
+
+  <g>
+    <rect x="420" y="94" width="260" height="132" rx="10" fill="#F0FDF4" stroke="#86EFAC" stroke-width="2.4"/>
+    <rect x="420" y="94" width="8" height="132" rx="4" fill="#16A34A"/>
+    <text x="452" y="138" class="title">PostgreSQL</text>
+    <text x="452" y="172" class="text">метаданные отчета:</text>
+    <text x="452" y="196" class="text">статус, период, ссылка</text>
+    <text x="452" y="216" class="label">ИСТОЧНИК ДАННЫХ</text>
+  </g>
+
+  <g>
+    <rect x="420" y="294" width="260" height="132" rx="10" fill="#F8FAFC" stroke="#C4B5FD" stroke-width="2.4"/>
+    <rect x="420" y="294" width="8" height="132" rx="4" fill="#7C3AED"/>
+    <text x="452" y="338" class="title">Backend</text>
+    <text x="452" y="372" class="text">формирует файл</text>
+    <text x="452" y="396" class="text">PDF / Excel / CSV</text>
+    <text x="452" y="416" class="label">ГЕНЕРАЦИЯ ОТЧЕТА</text>
+  </g>
+
+  <g>
+    <rect x="830" y="190" width="240" height="140" rx="10" fill="#FFFBEB" stroke="#FDE68A" stroke-width="2.4"/>
+    <rect x="830" y="190" width="8" height="140" rx="4" fill="#D97706"/>
+    <text x="862" y="234" class="title">Object Storage</text>
+    <text x="862" y="268" class="text">готовые файлы отчетов</text>
+    <text x="862" y="292" class="text">доступны по ссылке</text>
+    <text x="862" y="316" class="label">ХРАНЕНИЕ РЕЗУЛЬТАТА</text>
+  </g>
+
+  <path d="M290 260H350V160H410" class="line-blue"/>
+  <path d="M290 260H350V360H410" class="line-blue"/>
+  <path d="M550 226V284" class="line-green"/>
+  <path d="M680 360H760V260H820" class="line-violet"/>
+
+  <g>
+    <circle cx="176" cy="84" r="26" class="icon"/>
+    <path d="M126 156C134 128 154 114 176 114C198 114 218 128 226 156" class="icon"/>
+    <path d="M142 156H210" class="icon"/>
+  </g>
+
+  <g>
+    <ellipse cx="550" cy="52" rx="48" ry="12" class="icon"/>
+    <path d="M502 52V78C502 86 524 94 550 94C576 94 598 86 598 78V52" class="icon"/>
+    <path d="M502 66C502 74 524 82 550 82C576 82 598 74 598 66" class="icon"/>
+  </g>
+
+  <g>
+    <rect x="516" y="448" width="68" height="46" rx="4" class="icon"/>
+    <line x1="530" y1="464" x2="570" y2="464" class="icon"/>
+    <line x1="530" y1="478" x2="562" y2="478" class="icon"/>
+  </g>
+
+  <g>
+    <ellipse cx="950" cy="382" rx="50" ry="13" class="icon"/>
+    <path d="M900 382V412C900 420 922 428 950 428C978 428 1000 420 1000 412V382" class="icon"/>
+    <path d="M900 397C900 405 922 413 950 413C978 413 1000 405 1000 397" class="icon"/>
+  </g>
+</svg>

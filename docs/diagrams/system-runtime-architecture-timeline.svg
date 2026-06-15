@@ -1,0 +1,105 @@
+<svg width="980" height="620" viewBox="0 0 980 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowDown" markerWidth="12" markerHeight="12" refX="6" refY="10" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 1L6 11L11 1Z" fill="#6B7280"/>
+    </marker>
+    <style>
+      .title {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        fill: #111827;
+      }
+      .text {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        fill: #4B5563;
+      }
+      .axis {
+        stroke: #6B7280;
+        stroke-width: 2.2;
+        stroke-linecap: round;
+      }
+      .branch {
+        stroke-width: 2.4;
+        stroke-linecap: round;
+      }
+      .card {
+        fill: #FFFFFF;
+        stroke: #D1D5DB;
+        stroke-width: 1.8;
+      }
+      .node-ring {
+        fill: #FFFFFF;
+        stroke-width: 2.4;
+      }
+    </style>
+  </defs>
+
+  <rect width="980" height="620" fill="#FFFFFF"/>
+  <path d="M490 46V574" class="axis"/>
+  <path d="M478 574L490 590L502 574Z" fill="#6B7280"/>
+
+  <!-- Frontend -->
+  <circle cx="490" cy="92" r="27" class="node-ring" stroke="#60A5FA"/>
+  <circle cx="490" cy="92" r="12" fill="#2563EB"/>
+  <path d="M478 92H385" class="branch" stroke="#2563EB"/>
+  <circle cx="385" cy="92" r="10" fill="#2563EB"/>
+  <rect x="122" y="62" width="250" height="86" rx="10" class="card"/>
+  <rect x="122" y="62" width="6" height="86" rx="3" fill="#2563EB"/>
+  <text x="150" y="94" class="title">Frontend</text>
+  <text x="150" y="121" class="text">Vite dev server</text>
+  <text x="150" y="140" class="text">интерфейс пользователя</text>
+
+  <!-- Backend -->
+  <circle cx="490" cy="190" r="27" class="node-ring" stroke="#A78BFA"/>
+  <circle cx="490" cy="190" r="12" fill="#7C3AED"/>
+  <path d="M502 190H595" class="branch" stroke="#7C3AED"/>
+  <circle cx="595" cy="190" r="10" fill="#7C3AED"/>
+  <rect x="608" y="146" width="250" height="98" rx="10" class="card"/>
+  <rect x="608" y="146" width="6" height="98" rx="3" fill="#7C3AED"/>
+  <text x="636" y="178" class="title">Backend API</text>
+  <text x="636" y="205" class="text">REST, авторизация</text>
+  <text x="636" y="224" class="text">данные и сценарии</text>
+
+  <!-- Data layer -->
+  <circle cx="490" cy="300" r="27" class="node-ring" stroke="#34D399"/>
+  <circle cx="490" cy="300" r="12" fill="#0F766E"/>
+  <path d="M502 300H595" class="branch" stroke="#0F766E"/>
+  <circle cx="595" cy="300" r="10" fill="#0F766E"/>
+  <path d="M608 274H595V356H608" stroke="#0F766E" stroke-width="2.2" stroke-linecap="round"/>
+  <rect x="608" y="250" width="250" height="66" rx="10" class="card"/>
+  <rect x="608" y="250" width="6" height="66" rx="3" fill="#16A34A"/>
+  <text x="636" y="282" class="title">PostgreSQL</text>
+  <text x="636" y="306" class="text">основная БД</text>
+  <rect x="608" y="334" width="250" height="66" rx="10" class="card"/>
+  <rect x="608" y="334" width="6" height="66" rx="3" fill="#0F766E"/>
+  <text x="636" y="366" class="title">Redis</text>
+  <text x="636" y="390" class="text">TTL и кэш</text>
+
+  <!-- Worker -->
+  <circle cx="490" cy="420" r="27" class="node-ring" stroke="#F59E0B"/>
+  <circle cx="490" cy="420" r="12" fill="#D97706"/>
+  <path d="M478 420H385" class="branch" stroke="#D97706"/>
+  <circle cx="385" cy="420" r="10" fill="#D97706"/>
+  <rect x="122" y="380" width="250" height="92" rx="10" class="card"/>
+  <rect x="122" y="380" width="6" height="92" rx="3" fill="#D97706"/>
+  <text x="150" y="412" class="title">Worker</text>
+  <text x="150" y="439" class="text">проверки</text>
+  <text x="150" y="458" class="text">инциденты</text>
+
+  <!-- Outputs -->
+  <circle cx="490" cy="532" r="27" class="node-ring" stroke="#94A3B8"/>
+  <circle cx="490" cy="532" r="12" fill="#64748B"/>
+  <path d="M502 532H595" class="branch" stroke="#64748B"/>
+  <circle cx="595" cy="532" r="10" fill="#64748B"/>
+  <path d="M608 508H595V578H608" stroke="#64748B" stroke-width="2.2" stroke-linecap="round"/>
+  <rect x="608" y="476" width="250" height="66" rx="10" class="card"/>
+  <rect x="608" y="476" width="6" height="66" rx="3" fill="#64748B"/>
+  <text x="636" y="508" class="title">Object Storage</text>
+  <text x="636" y="532" class="text">файлы отчетов</text>
+  <rect x="608" y="558" width="250" height="50" rx="10" class="card"/>
+  <rect x="608" y="558" width="6" height="50" rx="3" fill="#DC2626"/>
+  <text x="636" y="589" class="title">Mock services</text>
+</svg>

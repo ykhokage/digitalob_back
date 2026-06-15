@@ -1,0 +1,76 @@
+<svg width="1120" height="220" viewBox="0 0 1120 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 1L9 5L1 9Z" fill="#64748B"/>
+    </marker>
+    <style>
+      .title {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        fill: #111827;
+      }
+      .text {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        fill: #4B5563;
+      }
+      .line {
+        stroke: #64748B;
+        stroke-width: 2.5;
+        stroke-linecap: round;
+        marker-end: url(#arrow);
+      }
+    </style>
+  </defs>
+
+  <rect width="1120" height="220" fill="#FFFFFF"/>
+
+  <g>
+    <rect x="30" y="62" width="180" height="96" rx="9" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+    <rect x="30" y="62" width="7" height="96" rx="3.5" fill="#2563EB"/>
+    <text x="58" y="96" class="title">Период</text>
+    <text x="58" y="124" class="text">пользователь</text>
+    <text x="58" y="144" class="text">выбирает диапазон</text>
+  </g>
+
+  <path d="M210 110H248" class="line"/>
+
+  <g>
+    <rect x="258" y="62" width="180" height="96" rx="9" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+    <rect x="258" y="62" width="7" height="96" rx="3.5" fill="#0F766E"/>
+    <text x="286" y="96" class="title">Расчет</text>
+    <text x="286" y="124" class="text">SLA/SLO, uptime,</text>
+    <text x="286" y="144" class="text">latency</text>
+  </g>
+
+  <path d="M438 110H476" class="line"/>
+
+  <g>
+    <rect x="486" y="62" width="180" height="96" rx="9" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+    <rect x="486" y="62" width="7" height="96" rx="3.5" fill="#2563EB"/>
+    <text x="514" y="96" class="title">Файл</text>
+    <text x="514" y="124" class="text">PDF, Excel или CSV</text>
+  </g>
+
+  <path d="M666 110H704" class="line"/>
+
+  <g>
+    <rect x="714" y="62" width="180" height="96" rx="9" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+    <rect x="714" y="62" width="7" height="96" rx="3.5" fill="#0F766E"/>
+    <text x="742" y="96" class="title">Хранилище</text>
+    <text x="742" y="124" class="text">загрузка в Object</text>
+    <text x="742" y="144" class="text">Storage</text>
+  </g>
+
+  <path d="M894 110H932" class="line"/>
+
+  <g>
+    <rect x="942" y="62" width="150" height="96" rx="9" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+    <rect x="942" y="62" width="7" height="96" rx="3.5" fill="#2563EB"/>
+    <text x="970" y="96" class="title">Скачивание</text>
+    <text x="970" y="124" class="text">ссылка</text>
+    <text x="970" y="144" class="text">в интерфейсе</text>
+  </g>
+</svg>

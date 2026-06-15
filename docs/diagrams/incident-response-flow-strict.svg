@@ -1,0 +1,102 @@
+<svg width="1280" height="360" viewBox="0 0 1280 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowYellow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M2 1L11 6L2 11Z" fill="#F2C300"/>
+    </marker>
+    <style>
+      .num {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 66px;
+        font-weight: 700;
+        fill: #F2C300;
+      }
+      .title {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        fill: #111827;
+      }
+      .text {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        fill: #4B5563;
+      }
+      .icon {
+        stroke: #111827;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        fill: none;
+      }
+    </style>
+  </defs>
+
+  <rect width="1280" height="360" fill="#FFFFFF"/>
+
+  <line x1="42" y1="60" x2="42" y2="300" stroke="#111827" stroke-width="2"/>
+  <line x1="286" y1="60" x2="286" y2="300" stroke="#111827" stroke-width="2"/>
+  <line x1="530" y1="60" x2="530" y2="300" stroke="#111827" stroke-width="2"/>
+  <line x1="774" y1="60" x2="774" y2="300" stroke="#111827" stroke-width="2"/>
+  <line x1="1018" y1="60" x2="1018" y2="300" stroke="#111827" stroke-width="2"/>
+  <line x1="1238" y1="60" x2="1238" y2="300" stroke="#111827" stroke-width="2"/>
+
+  <path d="M266 178H294" stroke="#F2C300" stroke-width="7" marker-end="url(#arrowYellow)"/>
+  <path d="M510 178H538" stroke="#F2C300" stroke-width="7" marker-end="url(#arrowYellow)"/>
+  <path d="M754 178H782" stroke="#F2C300" stroke-width="7" marker-end="url(#arrowYellow)"/>
+  <path d="M998 178H1026" stroke="#F2C300" stroke-width="7" marker-end="url(#arrowYellow)"/>
+
+  <g>
+    <text x="198" y="104" class="num">1</text>
+    <text x="72" y="148" class="title">Обнаружение</text>
+    <text x="72" y="180" class="text">worker фиксирует</text>
+    <text x="72" y="201" class="text">отклонение</text>
+
+    <circle cx="116" cy="258" r="27" class="icon"/>
+    <path d="M102 258L113 269L134 246" class="icon"/>
+  </g>
+
+  <g>
+    <text x="442" y="104" class="num">2</text>
+    <text x="316" y="148" class="title">Классификация</text>
+    <text x="316" y="180" class="text">причина и</text>
+    <text x="316" y="201" class="text">критичность</text>
+
+    <rect x="342" y="232" width="74" height="52" rx="4" class="icon"/>
+    <line x1="356" y1="248" x2="402" y2="248" class="icon"/>
+    <line x1="356" y1="262" x2="390" y2="262" class="icon"/>
+    <line x1="356" y1="276" x2="398" y2="276" class="icon"/>
+  </g>
+
+  <g>
+    <text x="686" y="104" class="num">3</text>
+    <text x="560" y="148" class="title">Оповещение</text>
+    <text x="560" y="180" class="text">канал и правила</text>
+
+    <path d="M596 282H626L660 298V222L626 238H596V282Z" class="icon"/>
+    <line x1="674" y1="244" x2="690" y2="234" class="icon"/>
+    <line x1="678" y1="260" x2="698" y2="260" class="icon"/>
+    <line x1="674" y1="276" x2="690" y2="286" class="icon"/>
+  </g>
+
+  <g>
+    <text x="930" y="104" class="num">4</text>
+    <text x="804" y="148" class="title">Восстановление</text>
+    <text x="804" y="180" class="text">закрытие инцидента</text>
+
+    <path d="M848 252C858 232 888 228 904 246C920 264 906 294 880 294C858 294 842 278 848 252Z" class="icon"/>
+    <path d="M876 244V264H896" class="icon"/>
+    <path d="M838 286L858 286" class="icon"/>
+  </g>
+
+  <g>
+    <text x="1150" y="104" class="num">5</text>
+    <text x="1048" y="148" class="title">Отчет</text>
+    <text x="1048" y="180" class="text">история и выводы</text>
+
+    <rect x="1076" y="226" width="70" height="74" rx="4" class="icon"/>
+    <line x1="1092" y1="246" x2="1130" y2="246" class="icon"/>
+    <line x1="1092" y1="262" x2="1126" y2="262" class="icon"/>
+    <line x1="1092" y1="278" x2="1134" y2="278" class="icon"/>
+  </g>
+</svg>

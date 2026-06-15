@@ -1,0 +1,80 @@
+<svg width="1080" height="340" viewBox="0 0 1080 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 1L9 5L1 9Z" fill="#475569"/>
+    </marker>
+    <style>
+      .title {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        fill: #111827;
+      }
+      .text {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        fill: #4B5563;
+      }
+      .label {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+      }
+      .value {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        fill: #111827;
+      }
+    </style>
+  </defs>
+
+  <rect width="1080" height="340" fill="#FFFFFF"/>
+
+  <g>
+    <rect x="48" y="42" width="286" height="126" rx="7" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.8"/>
+    <rect x="48" y="42" width="7" height="126" rx="3.5" fill="#2563EB"/>
+    <text x="76" y="82" class="title">SLA</text>
+    <text x="76" y="114" class="text">формальное обещание качества</text>
+    <text x="76" y="138" class="text">например, 99,9% доступности</text>
+  </g>
+
+  <path d="M344 105H392" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <g>
+    <rect x="404" y="42" width="286" height="126" rx="7" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.8"/>
+    <rect x="404" y="42" width="7" height="126" rx="3.5" fill="#0F766E"/>
+    <text x="432" y="82" class="title">SLO</text>
+    <text x="432" y="114" class="text">внутренняя инженерная цель</text>
+    <text x="432" y="138" class="text">контролируется по метрикам</text>
+  </g>
+
+  <path d="M700 105H748" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <g>
+    <rect x="760" y="42" width="286" height="126" rx="7" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.8"/>
+    <rect x="760" y="42" width="7" height="126" rx="3.5" fill="#D97706"/>
+    <text x="788" y="82" class="title">Error budget</text>
+    <text x="788" y="114" class="text">допустимый объем ошибок</text>
+    <text x="788" y="138" class="text">0,1% при цели 99,9%</text>
+  </g>
+
+  <g>
+    <rect x="88" y="214" width="904" height="48" rx="7" fill="#F8FAFC" stroke="#D1D5DB" stroke-width="1.6"/>
+    <rect x="88" y="214" width="640" height="48" rx="7" fill="#DCFCE7"/>
+    <rect x="728" y="214" width="190" height="48" fill="#FEF3C7"/>
+    <path d="M918 214H985C988.866 214 992 217.134 992 221V255C992 258.866 988.866 262 985 262H918V214Z" fill="#FEE2E2"/>
+
+    <line x1="728" y1="208" x2="728" y2="268" stroke="#FFFFFF" stroke-width="2"/>
+    <line x1="918" y1="208" x2="918" y2="268" stroke="#FFFFFF" stroke-width="2"/>
+
+    <text x="112" y="292" class="label" fill="#16A34A">норма</text>
+    <text x="706" y="292" class="label" fill="#D97706" text-anchor="middle">быстрый расход бюджета</text>
+    <text x="954" y="292" class="label" fill="#DC2626" text-anchor="middle">нарушение порога</text>
+
+    <text x="112" y="198" class="value">99,9%</text>
+    <text x="684" y="198" class="text">целевой уровень</text>
+    <text x="928" y="198" class="value">0,1%</text>
+  </g>
+</svg>

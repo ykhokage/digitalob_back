@@ -1,0 +1,73 @@
+<svg width="1080" height="190" viewBox="0 0 1080 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 1L9 5L1 9Z" fill="#64748B"/>
+    </marker>
+    <style>
+      .title {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        fill: #111827;
+      }
+      .text {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12.5px;
+        font-weight: 400;
+        fill: #4B5563;
+      }
+      .line {
+        stroke: #64748B;
+        stroke-width: 2.4;
+        stroke-linecap: round;
+        marker-end: url(#arrow);
+      }
+    </style>
+  </defs>
+
+  <rect width="1080" height="190" fill="#FFFFFF"/>
+
+  <g>
+    <rect x="28" y="52" width="160" height="86" rx="9" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+    <rect x="28" y="52" width="7" height="86" rx="3.5" fill="#2563EB"/>
+    <text x="52" y="80" class="title">Пользователь</text>
+    <text x="52" y="108" class="text">добавляет сервис</text>
+  </g>
+
+  <path d="M188 95H224" class="line"/>
+
+  <g>
+    <rect x="234" y="52" width="160" height="86" rx="9" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+    <rect x="234" y="52" width="7" height="86" rx="3.5" fill="#0F766E"/>
+    <text x="258" y="80" class="title">Backend</text>
+    <text x="258" y="108" class="text">валидирует и</text>
+    <text x="258" y="126" class="text">сохраняет</text>
+  </g>
+
+  <path d="M394 95H430" class="line"/>
+
+  <g>
+    <rect x="440" y="52" width="160" height="86" rx="9" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+    <rect x="440" y="52" width="7" height="86" rx="3.5" fill="#0F766E"/>
+    <text x="464" y="80" class="title">Worker</text>
+    <text x="464" y="108" class="text">выполняет проверку</text>
+  </g>
+
+  <path d="M600 95H636" class="line"/>
+
+  <g>
+    <rect x="646" y="52" width="160" height="86" rx="9" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+    <rect x="646" y="52" width="7" height="86" rx="3.5" fill="#0F766E"/>
+    <text x="670" y="80" class="title">База данных</text>
+    <text x="670" y="108" class="text">хранит историю</text>
+  </g>
+
+  <path d="M806 95H842" class="line"/>
+
+  <g>
+    <rect x="852" y="52" width="200" height="86" rx="9" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+    <rect x="852" y="52" width="7" height="86" rx="3.5" fill="#2563EB"/>
+    <text x="876" y="80" class="title">Dashboard</text>
+    <text x="876" y="108" class="text">показывает состояние</text>
+  </g>
+</svg>

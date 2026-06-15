@@ -1,0 +1,101 @@
+<svg width="1280" height="420" viewBox="0 0 1280 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowBlue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M2 1L11 6L2 11Z" fill="#2563EB"/>
+    </marker>
+    <style>
+      .num {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 72px;
+        font-weight: 700;
+        fill: #2563EB;
+      }
+      .title {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 21px;
+        font-weight: 700;
+        fill: #111827;
+      }
+      .text {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        fill: #4B5563;
+      }
+      .bar {
+        fill: #2563EB;
+      }
+      .icon {
+        stroke: #111827;
+        stroke-width: 2.2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        fill: none;
+      }
+    </style>
+  </defs>
+
+  <rect width="1280" height="420" fill="#FFFFFF"/>
+
+  <line x1="70" y1="64" x2="70" y2="342" stroke="#111827" stroke-width="2"/>
+  <line x1="370" y1="64" x2="370" y2="342" stroke="#111827" stroke-width="2"/>
+  <line x1="670" y1="64" x2="670" y2="342" stroke="#111827" stroke-width="2"/>
+  <line x1="970" y1="64" x2="970" y2="342" stroke="#111827" stroke-width="2"/>
+  <line x1="1210" y1="64" x2="1210" y2="342" stroke="#111827" stroke-width="2"/>
+
+  <path d="M344 202H386" stroke="#2563EB" stroke-width="5" marker-end="url(#arrowBlue)"/>
+  <path d="M644 202H686" stroke="#2563EB" stroke-width="5" marker-end="url(#arrowBlue)"/>
+  <path d="M944 202H986" stroke="#2563EB" stroke-width="5" marker-end="url(#arrowBlue)"/>
+
+  <g>
+    <text x="246" y="120" class="num">1</text>
+    <text x="110" y="166" class="title">Frontend</text>
+    <text x="110" y="200" class="text">React UI</text>
+    <text x="110" y="224" class="text">формы, графики, карта</text>
+    <text x="110" y="248" class="text">работа пользователя</text>
+
+    <rect x="110" y="292" width="112" height="8" rx="4" class="bar"/>
+    <rect x="110" y="310" width="164" height="8" rx="4" fill="#BFDBFE"/>
+    <rect x="110" y="328" width="136" height="8" rx="4" fill="#DBEAFE"/>
+  </g>
+
+  <g>
+    <text x="546" y="120" class="num">2</text>
+    <text x="410" y="166" class="title">Backend API</text>
+    <text x="410" y="200" class="text">авторизация</text>
+    <text x="410" y="224" class="text">бизнес-правила</text>
+    <text x="410" y="248" class="text">REST-маршруты</text>
+
+    <path d="M450 318H544" class="icon"/>
+    <path d="M466 288H528V318H466V288Z" class="icon"/>
+    <path d="M482 288V268H512V288" class="icon"/>
+  </g>
+
+  <g>
+    <text x="846" y="120" class="num">3</text>
+    <text x="710" y="166" class="title">Worker</text>
+    <text x="710" y="200" class="text">проверки по расписанию</text>
+    <text x="710" y="224" class="text">метрики</text>
+    <text x="710" y="248" class="text">инциденты</text>
+
+    <circle cx="770" cy="304" r="30" class="icon"/>
+    <path d="M770 274V258" class="icon"/>
+    <path d="M770 350V334" class="icon"/>
+    <path d="M740 304H724" class="icon"/>
+    <path d="M816 304H800" class="icon"/>
+    <path d="M770 286V304L786 314" class="icon"/>
+  </g>
+
+  <g>
+    <text x="1120" y="120" class="num">4</text>
+    <text x="1010" y="166" class="title">Хранилища</text>
+
+    <text x="1010" y="200" class="text">PostgreSQL: сущности, история</text>
+    <text x="1010" y="224" class="text">Redis: кэш, rate limit</text>
+    <text x="1010" y="248" class="text">Storage: PDF, Excel, CSV</text>
+
+    <ellipse cx="1074" cy="290" rx="54" ry="14" class="icon"/>
+    <path d="M1020 290V322C1020 330 1044 338 1074 338C1104 338 1128 330 1128 322V290" class="icon"/>
+    <path d="M1020 306C1020 314 1044 322 1074 322C1104 322 1128 314 1128 306" class="icon"/>
+  </g>
+</svg>

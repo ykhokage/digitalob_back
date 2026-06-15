@@ -1,0 +1,87 @@
+<svg width="1080" height="420" viewBox="0 0 1080 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .card-title {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        fill: #111827;
+      }
+      .card-text {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        fill: #4B5563;
+      }
+      .value {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 29px;
+        font-weight: 700;
+      }
+      .label {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        fill: #6B7280;
+      }
+    </style>
+  </defs>
+
+  <rect width="1080" height="420" fill="#FFFFFF"/>
+
+  <g>
+    <rect x="34" y="30" width="318" height="156" rx="7" fill="#F8FAFC" stroke="#D1D5DB" stroke-width="1.7"/>
+    <rect x="34" y="30" width="7" height="156" rx="3.5" fill="#16A34A"/>
+    <text x="64" y="70" class="card-title">Uptime</text>
+    <text x="64" y="100" class="card-text">доля успешных проверок</text>
+    <text x="64" y="146" class="label">ДОСТУПНОСТЬ</text>
+    <text x="324" y="148" class="value" fill="#16A34A" text-anchor="end">99,9%</text>
+  </g>
+
+  <g>
+    <rect x="381" y="30" width="318" height="156" rx="7" fill="#F8FAFC" stroke="#D1D5DB" stroke-width="1.7"/>
+    <rect x="381" y="30" width="7" height="156" rx="3.5" fill="#2563EB"/>
+    <text x="411" y="70" class="card-title">Latency</text>
+    <text x="411" y="100" class="card-text">p50 / p95 / p99</text>
+    <text x="411" y="120" class="card-text">время ответа</text>
+    <text x="411" y="146" class="label">ЗАДЕРЖКА</text>
+    <text x="671" y="148" class="value" fill="#2563EB" text-anchor="end">p95</text>
+  </g>
+
+  <g>
+    <rect x="728" y="30" width="318" height="156" rx="7" fill="#F8FAFC" stroke="#D1D5DB" stroke-width="1.7"/>
+    <rect x="728" y="30" width="7" height="156" rx="3.5" fill="#DC2626"/>
+    <text x="758" y="70" class="card-title">Error rate</text>
+    <text x="758" y="100" class="card-text">доля 4xx/5xx</text>
+    <text x="758" y="120" class="card-text">и таймаутов</text>
+    <text x="758" y="146" class="label">ОШИБКИ</text>
+    <text x="1018" y="148" class="value" fill="#DC2626" text-anchor="end">5xx</text>
+  </g>
+
+  <g>
+    <rect x="34" y="222" width="318" height="156" rx="7" fill="#F8FAFC" stroke="#D1D5DB" stroke-width="1.7"/>
+    <rect x="34" y="222" width="7" height="156" rx="3.5" fill="#D97706"/>
+    <text x="64" y="262" class="card-title">MTTR</text>
+    <text x="64" y="292" class="card-text">среднее время восстановления</text>
+    <text x="64" y="338" class="label">ВОССТАНОВЛЕНИЕ</text>
+    <text x="324" y="340" class="value" fill="#D97706" text-anchor="end">мин</text>
+  </g>
+
+  <g>
+    <rect x="381" y="222" width="318" height="156" rx="7" fill="#F8FAFC" stroke="#D1D5DB" stroke-width="1.7"/>
+    <rect x="381" y="222" width="7" height="156" rx="3.5" fill="#7C3AED"/>
+    <text x="411" y="262" class="card-title">SLA / SLO</text>
+    <text x="411" y="292" class="card-text">целевые уровни качества</text>
+    <text x="411" y="338" class="label">КАЧЕСТВО</text>
+    <text x="671" y="340" class="value" fill="#7C3AED" text-anchor="end">цель</text>
+  </g>
+
+  <g>
+    <rect x="728" y="222" width="318" height="156" rx="7" fill="#F8FAFC" stroke="#D1D5DB" stroke-width="1.7"/>
+    <rect x="728" y="222" width="7" height="156" rx="3.5" fill="#0F766E"/>
+    <text x="758" y="262" class="card-title">Resources</text>
+    <text x="758" y="292" class="card-text">CPU, RAM, диск</text>
+    <text x="758" y="338" class="label">НАГРУЗКА</text>
+    <text x="1018" y="340" class="value" fill="#0F766E" text-anchor="end">load</text>
+  </g>
+</svg>

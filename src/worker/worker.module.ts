@@ -1,0 +1,1 @@
+import { Module } from '@nestjs/common';import { NotificationsModule } from '../notifications/notifications.module';import { WorkerService } from './worker.service';@Module({imports:[NotificationsModule],providers:[WorkerService],exports:[WorkerService]})export class WorkerModule{}

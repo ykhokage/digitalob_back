@@ -1,0 +1,5 @@
+ALTER TABLE "User" ADD COLUMN "position" TEXT;
+ALTER TABLE "User" ADD COLUMN "company" TEXT;
+ALTER TABLE "User" ADD COLUMN "location" TEXT;
+ALTER TABLE "User" ADD COLUMN "website" TEXT;
+ALTER TABLE "User" ADD COLUMN "bio" TEXT;

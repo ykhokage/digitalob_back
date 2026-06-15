@@ -1,0 +1,121 @@
+<svg width="1220" height="540" viewBox="0 0 1220 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 1L9 5L1 9Z" fill="#2563EB"/>
+    </marker>
+    <marker id="arrowSlate" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 1L9 5L1 9Z" fill="#64748B"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 1L9 5L1 9Z" fill="#D97706"/>
+    </marker>
+    <style>
+      .title {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        fill: #111827;
+      }
+      .text {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        fill: #4B5563;
+      }
+      .label {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        fill: #64748B;
+      }
+      .line-blue {
+        stroke: #2563EB;
+        stroke-width: 2.6;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        marker-end: url(#arrowBlue);
+      }
+      .line-slate {
+        stroke: #64748B;
+        stroke-width: 2.6;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        marker-end: url(#arrowSlate);
+      }
+      .line-orange {
+        stroke: #D97706;
+        stroke-width: 2.6;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        marker-end: url(#arrowOrange);
+      }
+    </style>
+  </defs>
+
+  <rect width="1220" height="540" fill="#FFFFFF"/>
+
+  <g>
+    <rect x="54" y="210" width="230" height="140" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+    <rect x="54" y="210" width="8" height="140" rx="4" fill="#2563EB"/>
+    <text x="88" y="254" class="title">Frontend</text>
+    <text x="88" y="288" class="text">React, Vite</text>
+    <text x="88" y="312" class="text">UI и визуализация</text>
+    <text x="88" y="334" class="label">КЛИЕНТСКИЙ СЛОЙ</text>
+  </g>
+
+  <g>
+    <rect x="390" y="104" width="250" height="140" rx="10" fill="#F8FAFC" stroke="#C4B5FD" stroke-width="2.4"/>
+    <rect x="390" y="104" width="8" height="140" rx="4" fill="#7C3AED"/>
+    <text x="424" y="148" class="title">Backend API</text>
+    <text x="424" y="182" class="text">REST</text>
+    <text x="424" y="206" class="text">авторизация</text>
+    <text x="424" y="230" class="text">отчеты</text>
+  </g>
+
+  <g>
+    <rect x="390" y="316" width="250" height="140" rx="10" fill="#FFFBEB" stroke="#FDE68A" stroke-width="2.4"/>
+    <rect x="390" y="316" width="8" height="140" rx="4" fill="#D97706"/>
+    <text x="424" y="360" class="title">Worker</text>
+    <text x="424" y="394" class="text">фоновые проверки</text>
+    <text x="424" y="418" class="text">инциденты</text>
+    <text x="424" y="442" class="text">уведомления</text>
+  </g>
+
+  <g>
+    <rect x="820" y="48" width="320" height="92" rx="10" fill="#F0FDF4" stroke="#86EFAC" stroke-width="2.4"/>
+    <rect x="820" y="48" width="8" height="92" rx="4" fill="#16A34A"/>
+    <text x="852" y="84" class="title">PostgreSQL</text>
+    <text x="852" y="116" class="text">данные и история</text>
+  </g>
+
+  <g>
+    <rect x="820" y="178" width="320" height="92" rx="10" fill="#F0FDFA" stroke="#5EEAD4" stroke-width="2.4"/>
+    <rect x="820" y="178" width="8" height="92" rx="4" fill="#0F766E"/>
+    <text x="852" y="214" class="title">Redis</text>
+    <text x="852" y="246" class="text">кэш и TTL</text>
+  </g>
+
+  <g>
+    <rect x="820" y="308" width="320" height="92" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2.4"/>
+    <rect x="820" y="308" width="8" height="92" rx="4" fill="#64748B"/>
+    <text x="852" y="344" class="title">Yandex Object Storage</text>
+    <text x="852" y="376" class="text">файлы отчетов</text>
+  </g>
+
+  <g>
+    <rect x="820" y="438" width="320" height="92" rx="10" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="2.4"/>
+    <rect x="820" y="438" width="8" height="92" rx="4" fill="#DC2626"/>
+    <text x="852" y="474" class="title">Стенд микросервисов</text>
+    <text x="852" y="506" class="text">режимы ok / slow / down</text>
+  </g>
+
+  <path d="M284 280H330V174H380" class="line-blue"/>
+  <path d="M515 244V306" class="line-slate"/>
+
+  <path d="M640 142H762V94H810" class="line-slate"/>
+  <path d="M640 174H810" class="line-slate"/>
+  <path d="M640 206H762V354H810" class="line-slate"/>
+
+  <path d="M640 386H748V484H810" class="line-orange"/>
+
+</svg>

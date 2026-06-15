@@ -1,0 +1,346 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  OBSERVER
+}
+
+enum ServiceStatus {
+  OK
+  WARNING
+  CRITICAL
+  DISABLED
+  UNKNOWN
+}
+
+enum Environment {
+  DEV
+  TEST
+  PROD
+}
+
+enum IncidentStatus {
+  NEW
+  IN_PROGRESS
+  RESOLVED
+}
+
+enum Severity {
+  LOW
+  MEDIUM
+  HIGH
+  CRITICAL
+}
+
+enum NotificationChannel {
+  EMAIL
+  TELEGRAM
+  MAX
+  WEB_PUSH
+  WEBHOOK
+}
+
+enum NotificationType {
+  SERVICE_DOWN
+  SERVICE_RECOVERED
+  THRESHOLD_EXCEEDED
+  SYSTEM_OVERLOAD
+  DEPENDENCY_PROBLEM
+  SSL_EXPIRING
+  REPORT
+}
+
+model User {
+  id               String   @id @default(cuid())
+  email            String   @unique
+  passwordHash     String
+  name             String
+  role             Role     @default(OBSERVER)
+  emailConfirmed   Boolean  @default(false)
+  avatarUrl        String?
+  phone            String?
+  position         String?
+  company          String?
+  location         String?
+  website          String?
+  bio              String?
+  telegramChatId   String?
+  maxUserId        String?
+  webhookUrl       String?
+  twoFactorEnabled Boolean  @default(false)
+  twoFactorSecret  String?
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  refreshTokens     RefreshToken[]
+  loginLogs         LoginLog[]
+  auditLogs         AuditLog[]
+  services          Microservice[]
+  incidents         IncidentComment[]
+  assignedIncidents Incident[] @relation("incident_assignee")
+  notificationRules NotificationRule[]
+  webPushSubscriptions WebPushSubscription[]
+  reports           Report[]
+}
+
+model WebPushSubscription {
+  id        String   @id @default(cuid())
+  userId    String
+  endpoint  String   @unique
+  p256dh    String
+  auth      String
+  userAgent String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model RefreshToken {
+  id        String    @id @default(cuid())
+  tokenHash String
+  userId    String
+  expiresAt DateTime
+  revokedAt DateTime?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model LoginLog {
+  id        String   @id @default(cuid())
+  userId    String
+  ip        String?
+  userAgent String?
+  success   Boolean
+  reason    String?
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model EmailToken {
+  id        String    @id @default(cuid())
+  email     String
+  tokenHash String
+  type      String
+  expiresAt DateTime
+  usedAt    DateTime?
+  payload   Json?
+  createdAt DateTime  @default(now())
+
+  @@index([email, type, tokenHash])
+  @@index([expiresAt])
+}
+
+model Team {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  createdAt   DateTime @default(now())
+
+  services Microservice[]
+}
+
+model Microservice {
+  id                  String        @id @default(cuid())
+  name                String
+  description         String?
+  url                 String
+  type                String
+  environment         Environment   @default(PROD)
+  status              ServiceStatus @default(UNKNOWN)
+  checkIntervalSec    Int           @default(60)
+  timeoutMs           Int           @default(5000)
+  expectedStatusCodes Int[]         @default([200])
+  responseThresholdMs Int           @default(1000)
+  errorRateThreshold  Float         @default(5)
+  cpuThreshold        Float         @default(85)
+  ramThreshold        Float         @default(85)
+  diskThreshold       Float         @default(90)
+  tags                String[]      @default([])
+  groupName           String?
+  ownerTeam           String?
+  monitoringEnabled   Boolean       @default(true)
+  isFavorite          Boolean       @default(false)
+  userId              String?
+  teamId              String?
+  createdAt           DateTime      @default(now())
+  updatedAt           DateTime      @updatedAt
+
+  user          User?               @relation(fields: [userId], references: [id], onDelete: SetNull)
+  team          Team?               @relation(fields: [teamId], references: [id], onDelete: SetNull)
+  checks        HealthCheck[]
+  metrics       Metric[]
+  incidents     Incident[]
+  dependencies  ServiceDependency[] @relation("dependencies_from")
+  dependents    ServiceDependency[] @relation("dependencies_to")
+  notifications Notification[]
+}
+
+model ServiceDependency {
+  id       String @id @default(cuid())
+  sourceId String
+  targetId String
+
+  source Microservice @relation("dependencies_from", fields: [sourceId], references: [id], onDelete: Cascade)
+  target Microservice @relation("dependencies_to", fields: [targetId], references: [id], onDelete: Cascade)
+
+  @@unique([sourceId, targetId])
+}
+
+model HealthCheck {
+  id             String   @id @default(cuid())
+  serviceId      String
+  kind           String
+  success        Boolean
+  statusCode     Int?
+  responseTimeMs Int?
+  errorMessage   String?
+  checkedAt      DateTime @default(now())
+
+  service Microservice @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+}
+
+model Metric {
+  id                 String   @id @default(cuid())
+  serviceId          String
+  availability       Float
+  responseTimeMs     Int
+  successRate        Float
+  errorRate          Float
+  httpStatus         Int?
+  uptimeSec          Int
+  downtimeSec        Int
+  failureCount       Int
+  cpuUsage           Float?
+  ramUsage           Float?
+  diskUsage          Float?
+  requestsPerMinute  Int?
+  avgResponseTimeMs  Int?
+  peakResponseTimeMs Int?
+  appErrorCount      Int?
+  createdAt          DateTime @default(now())
+
+  service Microservice @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+
+  @@index([serviceId, createdAt])
+}
+
+model Incident {
+  id          String         @id @default(cuid())
+  serviceId   String
+  title       String
+  description String?
+  severity    Severity
+  status      IncidentStatus @default(NEW)
+  startedAt   DateTime       @default(now())
+  resolvedAt  DateTime?
+  durationSec Int?
+  rootCause   String?
+  assignedToId String?
+
+  service       Microservice      @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+  assignedTo    User?             @relation("incident_assignee", fields: [assignedToId], references: [id], onDelete: SetNull)
+  comments      IncidentComment[]
+  notifications Notification[]
+
+  @@index([serviceId, startedAt])
+  @@index([assignedToId])
+}
+
+model IncidentComment {
+  id         String   @id @default(cuid())
+  incidentId String
+  userId     String
+  body       String
+  createdAt  DateTime @default(now())
+
+  incident Incident @relation(fields: [incidentId], references: [id], onDelete: Cascade)
+  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model NotificationRule {
+  id                String              @id @default(cuid())
+  userId            String
+  name              String
+  type              NotificationType
+  channel           NotificationChannel
+  enabled           Boolean             @default(true)
+  scheduleCron      String?
+  quietHoursStart   String?
+  quietHoursEnd     String?
+  escalationMinutes Int?
+  dedupeWindowSec   Int                 @default(900)
+  config            Json?
+  createdAt         DateTime            @default(now())
+
+  user          User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  notifications Notification[]
+}
+
+model Notification {
+  id             String              @id @default(cuid())
+  serviceId      String?
+  incidentId     String?
+  ruleId         String?
+  type           NotificationType
+  channel        NotificationChannel
+  recipient      String?
+  payload        Json?
+  dedupeKey      String?
+  acknowledgedAt DateTime?
+  sentAt         DateTime?
+  failedAt       DateTime?
+  error          String?
+  createdAt      DateTime            @default(now())
+
+  service  Microservice?     @relation(fields: [serviceId], references: [id], onDelete: SetNull)
+  incident Incident?         @relation(fields: [incidentId], references: [id], onDelete: SetNull)
+  rule     NotificationRule? @relation(fields: [ruleId], references: [id], onDelete: SetNull)
+}
+
+model Report {
+  id                String   @id @default(cuid())
+  userId            String?
+  title             String
+  periodFrom        DateTime
+  periodTo          DateTime
+  uptime            Float
+  downtimeSec       Int
+  avgResponseTimeMs Int
+  incidentCount     Int
+  slaTarget         Float?
+  slaActual         Float?
+  sloViolations     Int      @default(0)
+  fileUrl           String?
+  createdAt         DateTime @default(now())
+
+  user User? @relation(fields: [userId], references: [id], onDelete: SetNull)
+}
+
+model AuditLog {
+  id         String   @id @default(cuid())
+  userId     String?
+  action     String
+  entityType String?
+  entityId   String?
+  ip         String?
+  userAgent  String?
+  metadata   Json?
+  createdAt  DateTime @default(now())
+
+  user User? @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([userId, createdAt])
+  @@index([action, createdAt])
+  @@index([entityType, entityId])
+}

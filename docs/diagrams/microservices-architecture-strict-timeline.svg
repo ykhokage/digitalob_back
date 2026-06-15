@@ -1,0 +1,169 @@
+<svg width="1080" height="1440" viewBox="0 0 1080 1440" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 1L9 5L1 9Z" fill="#2563EB"/>
+    </marker>
+    <marker id="arrowViolet" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 1L9 5L1 9Z" fill="#7C3AED"/>
+    </marker>
+    <marker id="arrowTeal" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 1L9 5L1 9Z" fill="#0F766E"/>
+    </marker>
+    <marker id="arrowAmber" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 1L9 5L1 9Z" fill="#B45309"/>
+    </marker>
+    <style>
+      .number {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 58px;
+        font-weight: 700;
+        letter-spacing: 0;
+      }
+      .title {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 28px;
+        font-weight: 700;
+        fill: #111827;
+      }
+      .bar {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        fill: #FFFFFF;
+      }
+      .text {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        fill: #4B5563;
+      }
+      .node {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        fill: #111827;
+      }
+      .small {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        fill: #374151;
+      }
+      .box {
+        fill: #F8FAFC;
+        stroke: #CBD5E1;
+        stroke-width: 2.5;
+      }
+      .flow {
+        stroke-width: 3;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    </style>
+  </defs>
+
+  <rect width="1080" height="1440" fill="#FFFFFF"/>
+
+  <line x1="540" y1="96" x2="540" y2="1256" stroke="#737373" stroke-width="2.3"/>
+  <path d="M540 1282L526 1256H554L540 1282Z" fill="#737373"/>
+
+  <g>
+    <circle cx="540" cy="190" r="46" fill="#FFFFFF" stroke="#2563EB" stroke-width="2.6"/>
+    <circle cx="540" cy="190" r="18" fill="#2563EB"/>
+    <line x1="522" y1="190" x2="450" y2="190" stroke="#2563EB" stroke-width="2.6"/>
+    <circle cx="450" cy="190" r="17" fill="#2563EB"/>
+
+    <text x="126" y="168" class="number" fill="#2563EB">01</text>
+    <text x="224" y="146" class="title">Frontend</text>
+    <rect x="224" y="168" width="148" height="30" fill="#2563EB"/>
+    <text x="298" y="189" class="bar" text-anchor="middle">КЛИЕНТСКИЙ СЛОЙ</text>
+    <text x="224" y="230" class="text">Пользовательский интерфейс формирует</text>
+    <text x="224" y="253" class="text">запросы к backend-инфраструктуре.</text>
+
+    <rect x="154" y="296" width="272" height="62" rx="9" fill="#F8FAFC" stroke="#93C5FD" stroke-width="2.7"/>
+    <text x="290" y="333" class="node" text-anchor="middle">Frontend</text>
+  </g>
+
+  <g>
+    <circle cx="540" cy="430" r="46" fill="#FFFFFF" stroke="#7C3AED" stroke-width="2.6"/>
+    <circle cx="540" cy="430" r="18" fill="#7C3AED"/>
+    <line x1="558" y1="430" x2="630" y2="430" stroke="#7C3AED" stroke-width="2.6"/>
+    <circle cx="630" cy="430" r="17" fill="#7C3AED"/>
+
+    <text x="914" y="430" class="number" fill="#7C3AED">02</text>
+    <text x="664" y="386" class="title">API Gateway</text>
+    <rect x="664" y="408" width="178" height="30" fill="#7C3AED"/>
+    <text x="753" y="429" class="bar" text-anchor="middle">ЕДИНАЯ ТОЧКА ВХОДА</text>
+    <text x="664" y="470" class="text">Gateway принимает запросы и направляет</text>
+    <text x="664" y="493" class="text">их к нужному микросервису.</text>
+
+    <rect x="654" y="296" width="274" height="62" rx="9" fill="#F8FAFC" stroke="#C4B5FD" stroke-width="2.7"/>
+    <text x="791" y="333" class="node" text-anchor="middle">API Gateway</text>
+  </g>
+
+  <path d="M426 327H646" class="flow" stroke="#2563EB" marker-end="url(#arrowBlue)"/>
+
+  <g>
+    <circle cx="540" cy="710" r="46" fill="#FFFFFF" stroke="#0F766E" stroke-width="2.6"/>
+    <circle cx="540" cy="710" r="18" fill="#0F766E"/>
+    <line x1="522" y1="710" x2="450" y2="710" stroke="#0F766E" stroke-width="2.6"/>
+    <circle cx="450" cy="710" r="17" fill="#0F766E"/>
+
+    <text x="126" y="688" class="number" fill="#0F766E">03</text>
+    <text x="224" y="666" class="title">Микросервисы</text>
+    <rect x="224" y="688" width="188" height="30" fill="#0F766E"/>
+    <text x="318" y="709" class="bar" text-anchor="middle">БИЗНЕС-СЕРВИСЫ</text>
+    <text x="224" y="750" class="text">Логика разделена между отдельными</text>
+    <text x="224" y="773" class="text">сервисами с независимым развитием.</text>
+
+    <rect x="92" y="826" width="166" height="58" rx="9" class="box"/>
+    <text x="175" y="861" class="node" text-anchor="middle">Auth</text>
+    <rect x="282" y="826" width="166" height="58" rx="9" class="box"/>
+    <text x="365" y="861" class="node" text-anchor="middle">Orders</text>
+    <rect x="92" y="914" width="166" height="58" rx="9" class="box"/>
+    <text x="175" y="949" class="node" text-anchor="middle">Billing</text>
+    <rect x="282" y="914" width="166" height="58" rx="9" class="box"/>
+    <text x="365" y="949" class="node" text-anchor="middle">Notifications</text>
+  </g>
+
+  <path d="M654 358V790H365V826" class="flow" stroke="#7C3AED" marker-end="url(#arrowViolet)"/>
+
+  <g>
+    <circle cx="540" cy="1026" r="46" fill="#FFFFFF" stroke="#B45309" stroke-width="2.6"/>
+    <circle cx="540" cy="1026" r="18" fill="#B45309"/>
+    <line x1="558" y1="1026" x2="630" y2="1026" stroke="#B45309" stroke-width="2.6"/>
+    <circle cx="630" cy="1026" r="17" fill="#B45309"/>
+
+    <text x="914" y="1026" class="number" fill="#B45309">04</text>
+    <text x="664" y="982" class="title">Данные и интеграции</text>
+    <rect x="664" y="1004" width="216" height="30" fill="#B45309"/>
+    <text x="772" y="1025" class="bar" text-anchor="middle">ХРАНЕНИЕ И ВНЕШНИЕ API</text>
+    <text x="664" y="1066" class="text">Auth и Orders используют PostgreSQL / Redis.</text>
+    <text x="664" y="1089" class="text">Billing и Notifications обращаются к внешним API.</text>
+
+    <rect x="664" y="1144" width="162" height="58" rx="9" class="box"/>
+    <text x="745" y="1179" class="node" text-anchor="middle">Auth / Orders</text>
+    <path d="M826 1173H846" class="flow" stroke="#0F766E" marker-end="url(#arrowTeal)"/>
+    <rect x="854" y="1144" width="200" height="58" rx="9" fill="#F0FDF4" stroke="#86EFAC" stroke-width="2.8"/>
+    <text x="954" y="1179" class="node" text-anchor="middle">PostgreSQL / Redis</text>
+
+    <rect x="664" y="1236" width="162" height="58" rx="9" class="box"/>
+    <text x="745" y="1271" class="node" text-anchor="middle">Billing / Notify</text>
+    <path d="M826 1265H846" class="flow" stroke="#B45309" marker-end="url(#arrowAmber)"/>
+    <rect x="854" y="1236" width="200" height="58" rx="9" fill="#FFFBEB" stroke="#FDE68A" stroke-width="2.8"/>
+    <text x="954" y="1271" class="node" text-anchor="middle">Внешние API</text>
+  </g>
+
+  <g>
+    <rect x="112" y="1342" width="136" height="38" rx="19" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="2"/>
+    <text x="180" y="1366" class="small" text-anchor="middle">Frontend</text>
+    <rect x="272" y="1342" width="150" height="38" rx="19" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="2"/>
+    <text x="347" y="1366" class="small" text-anchor="middle">API Gateway</text>
+    <rect x="446" y="1342" width="126" height="38" rx="19" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="2"/>
+    <text x="509" y="1366" class="small" text-anchor="middle">сервисы</text>
+    <rect x="596" y="1342" width="178" height="38" rx="19" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="2"/>
+    <text x="685" y="1366" class="small" text-anchor="middle">данные / очереди</text>
+    <rect x="798" y="1342" width="142" height="38" rx="19" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="2"/>
+    <text x="869" y="1366" class="small" text-anchor="middle">внешние API</text>
+  </g>
+</svg>

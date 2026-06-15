@@ -1,0 +1,153 @@
+<svg width="900" height="1260" viewBox="0 0 900 1260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 1L9 5L1 9Z" fill="#DC2626"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 1L9 5L1 9Z" fill="#D97706"/>
+    </marker>
+    <marker id="arrowTeal" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 1L9 5L1 9Z" fill="#0F766E"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 1L9 5L1 9Z" fill="#2563EB"/>
+    </marker>
+    <style>
+      .num {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 58px;
+        font-weight: 700;
+        letter-spacing: 0;
+      }
+      .title {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+        font-weight: 700;
+        fill: #111827;
+      }
+      .bar {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        fill: #FFFFFF;
+      }
+      .text {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        fill: #4B5563;
+      }
+      .node {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        fill: #111827;
+      }
+      .icon {
+        stroke: currentColor;
+        stroke-width: 2.2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        fill: none;
+      }
+      .box {
+        fill: #F8FAFC;
+        stroke: #CBD5E1;
+        stroke-width: 2.3;
+      }
+    </style>
+  </defs>
+
+  <rect width="900" height="1260" fill="#FFFFFF"/>
+
+  <line x1="450" y1="88" x2="450" y2="1104" stroke="#737373" stroke-width="2.4"/>
+  <path d="M450 1130L436 1104H464L450 1130Z" fill="#737373"/>
+
+  <g>
+    <circle cx="450" cy="174" r="44" fill="#FFFFFF" stroke="#DC2626" stroke-width="2.5"/>
+    <circle cx="450" cy="174" r="17" fill="#DC2626"/>
+    <line x1="432" y1="174" x2="272" y2="174" stroke="#DC2626" stroke-width="2.5"/>
+    <circle cx="272" cy="174" r="16" fill="#DC2626"/>
+
+    <text x="114" y="158" class="num" fill="#DC2626">01</text>
+    <text x="210" y="136" class="title">Проверки</text>
+    <rect x="210" y="158" width="146" height="30" fill="#DC2626"/>
+    <text x="283" y="179" class="bar" text-anchor="middle">ПОВТОР ОШИБОК</text>
+    <text x="210" y="219" class="text">Несколько проверок фиксируют</text>
+    <text x="210" y="242" class="text">однотипное отклонение.</text>
+
+    <rect x="102" y="292" width="214" height="48" rx="8" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="2.4"/>
+    <text x="209" y="322" class="node" text-anchor="middle">Проверка 1: ошибка</text>
+    <rect x="102" y="360" width="214" height="48" rx="8" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="2.4"/>
+    <text x="209" y="390" class="node" text-anchor="middle">Проверка 2: ошибка</text>
+    <rect x="102" y="428" width="214" height="48" rx="8" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="2.4"/>
+    <text x="209" y="458" class="node" text-anchor="middle">Проверка 3: ошибка</text>
+
+    <path d="M316 316L414 492" stroke="#DC2626" stroke-width="2.5" marker-end="url(#arrowRed)"/>
+    <path d="M316 384L414 492" stroke="#DC2626" stroke-width="2.5" marker-end="url(#arrowRed)"/>
+    <path d="M316 452L414 492" stroke="#DC2626" stroke-width="2.5" marker-end="url(#arrowRed)"/>
+  </g>
+
+  <g>
+    <circle cx="450" cy="520" r="44" fill="#FFFFFF" stroke="#D97706" stroke-width="2.5"/>
+    <circle cx="450" cy="520" r="17" fill="#D97706"/>
+    <line x1="468" y1="520" x2="628" y2="520" stroke="#D97706" stroke-width="2.5"/>
+    <circle cx="628" cy="520" r="16" fill="#D97706"/>
+
+    <text x="806" y="504" class="num" fill="#D97706">02</text>
+    <text x="542" y="482" class="title">Активный инцидент</text>
+    <rect x="542" y="504" width="190" height="30" fill="#D97706"/>
+    <text x="637" y="525" class="bar" text-anchor="middle">ОДНА ЗАПИСЬ</text>
+    <text x="542" y="565" class="text">Создается один раз,</text>
+    <text x="542" y="588" class="text">далее только обновляется.</text>
+
+    <rect x="514" y="638" width="268" height="76" rx="9" fill="#FFFBEB" stroke="#FDE68A" stroke-width="2.5"/>
+    <rect x="514" y="638" width="7" height="76" rx="3.5" fill="#D97706"/>
+    <text x="544" y="670" class="node">Активный инцидент</text>
+    <text x="544" y="696" class="text">состояние обновляется</text>
+  </g>
+
+  <path d="M450 564V628" stroke="#D97706" stroke-width="2.5" marker-end="url(#arrowOrange)"/>
+
+  <g>
+    <circle cx="450" cy="790" r="44" fill="#FFFFFF" stroke="#0F766E" stroke-width="2.5"/>
+    <circle cx="450" cy="790" r="17" fill="#0F766E"/>
+    <line x1="432" y1="790" x2="272" y2="790" stroke="#0F766E" stroke-width="2.5"/>
+    <circle cx="272" cy="790" r="16" fill="#0F766E"/>
+
+    <text x="114" y="774" class="num" fill="#0F766E">03</text>
+    <text x="210" y="752" class="title">Дедупликация</text>
+    <rect x="210" y="774" width="178" height="30" fill="#0F766E"/>
+    <text x="299" y="795" class="bar" text-anchor="middle">ВРЕМЕННЫЙ КЛЮЧ</text>
+    <text x="210" y="835" class="text">Ограничивает повторное</text>
+    <text x="210" y="858" class="text">создание инцидента.</text>
+
+    <rect x="102" y="912" width="260" height="76" rx="9" fill="#F0FDFA" stroke="#5EEAD4" stroke-width="2.5"/>
+    <rect x="102" y="912" width="7" height="76" rx="3.5" fill="#0F766E"/>
+    <text x="132" y="944" class="node">Redis-дедупликация</text>
+    <text x="132" y="970" class="text">ключ ограничивает повторы</text>
+  </g>
+
+  <path d="M362 950H428" stroke="#0F766E" stroke-width="2.5" marker-end="url(#arrowTeal)"/>
+
+  <g>
+    <circle cx="450" cy="1036" r="44" fill="#FFFFFF" stroke="#2563EB" stroke-width="2.5"/>
+    <circle cx="450" cy="1036" r="17" fill="#2563EB"/>
+    <line x1="468" y1="1036" x2="628" y2="1036" stroke="#2563EB" stroke-width="2.5"/>
+    <circle cx="628" cy="1036" r="16" fill="#2563EB"/>
+
+    <text x="760" y="1020" class="num" fill="#2563EB">04</text>
+    <text x="542" y="998" class="title">Уведомления</text>
+    <rect x="542" y="1020" width="158" height="30" fill="#2563EB"/>
+    <text x="621" y="1041" class="bar" text-anchor="middle">СООБЩЕНИЯ</text>
+    <text x="542" y="1081" class="text">Первое сообщение, изменение</text>
+    <text x="542" y="1104" class="text">критичности, восстановление.</text>
+
+    <rect x="514" y="1144" width="284" height="76" rx="9" fill="#EFF6FF" stroke="#93C5FD" stroke-width="2.5"/>
+    <rect x="514" y="1144" width="7" height="76" rx="3.5" fill="#2563EB"/>
+    <text x="544" y="1176" class="node">Уведомления</text>
+    <text x="544" y="1202" class="text">канал получает обновления</text>
+  </g>
+
+  <path d="M450 834V992" stroke="#2563EB" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+</svg>

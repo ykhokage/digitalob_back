@@ -1,0 +1,94 @@
+<svg width="1120" height="420" viewBox="0 0 1120 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 1L9 5L1 9Z" fill="#2563EB"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 1L9 5L1 9Z" fill="#16A34A"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 1L9 5L1 9Z" fill="#DC2626"/>
+    </marker>
+    <style>
+      .title {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        fill: #111827;
+      }
+      .text {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        fill: #4B5563;
+      }
+      .label {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        fill: #64748B;
+      }
+      .line-blue {
+        stroke: #2563EB;
+        stroke-width: 2.7;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        marker-end: url(#arrowBlue);
+      }
+      .line-green {
+        stroke: #16A34A;
+        stroke-width: 2.7;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        marker-end: url(#arrowGreen);
+      }
+      .line-red {
+        stroke: #DC2626;
+        stroke-width: 2.7;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        marker-end: url(#arrowRed);
+      }
+    </style>
+  </defs>
+
+  <rect width="1120" height="420" fill="#FFFFFF"/>
+
+  <g>
+    <rect x="70" y="140" width="250" height="140" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+    <rect x="70" y="140" width="8" height="140" rx="4" fill="#2563EB"/>
+    <text x="104" y="184" class="title">Service</text>
+    <text x="104" y="218" class="text">настройки</text>
+    <text x="104" y="242" class="text">endpoint'ы</text>
+    <text x="104" y="266" class="text">пороги</text>
+  </g>
+
+  <g>
+    <rect x="430" y="140" width="250" height="140" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+    <rect x="430" y="140" width="8" height="140" rx="4" fill="#64748B"/>
+    <text x="464" y="184" class="title">ServiceCheck</text>
+    <text x="464" y="218" class="text">факт проверки</text>
+    <text x="464" y="242" class="text">код ответа</text>
+    <text x="464" y="266" class="text">время</text>
+  </g>
+
+  <g>
+    <rect x="800" y="64" width="250" height="120" rx="10" fill="#F0FDF4" stroke="#86EFAC" stroke-width="2.4"/>
+    <rect x="800" y="64" width="8" height="120" rx="4" fill="#16A34A"/>
+    <text x="834" y="108" class="title">Metric</text>
+    <text x="834" y="142" class="text">latency, CPU, RAM</text>
+    <text x="834" y="166" class="label">ЧИСЛОВЫЕ ПОКАЗАТЕЛИ</text>
+  </g>
+
+  <g>
+    <rect x="800" y="236" width="250" height="120" rx="10" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="2.4"/>
+    <rect x="800" y="236" width="8" height="120" rx="4" fill="#DC2626"/>
+    <text x="834" y="280" class="title">Incident</text>
+    <text x="834" y="314" class="text">причина</text>
+    <text x="834" y="338" class="text">критичность, статус</text>
+  </g>
+
+  <path d="M320 210H420" class="line-blue"/>
+  <path d="M680 190H730V124H790" class="line-green"/>
+  <path d="M680 230H730V296H790" class="line-red"/>
+</svg>

@@ -1,0 +1,78 @@
+<svg width="980" height="360" viewBox="0 0 980 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .role {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 26px;
+        font-weight: 700;
+        fill: #111827;
+      }
+      .item {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 17px;
+        font-weight: 400;
+        fill: #4B5563;
+      }
+      .badge {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        fill: #FFFFFF;
+      }
+      .dot-admin {
+        fill: #7C3AED;
+      }
+      .dot-user {
+        fill: #2563EB;
+      }
+    </style>
+  </defs>
+
+  <rect width="980" height="360" fill="#FFFFFF"/>
+
+  <g>
+    <rect x="50" y="44" width="410" height="272" rx="10" fill="#F8FAFC" stroke="#D1D5DB" stroke-width="1.8"/>
+    <rect x="50" y="44" width="8" height="272" rx="4" fill="#7C3AED"/>
+    <text x="82" y="92" class="role">Админ</text>
+    <rect x="330" y="66" width="92" height="30" rx="15" fill="#7C3AED"/>
+    <text x="376" y="86" class="badge" text-anchor="middle">ADMIN</text>
+
+    <circle cx="90" cy="132" r="5" class="dot-admin"/>
+    <text x="108" y="138" class="item">управление пользователями и ролями</text>
+
+    <circle cx="90" cy="168" r="5" class="dot-admin"/>
+    <text x="108" y="174" class="item">аудит действий</text>
+
+    <circle cx="90" cy="204" r="5" class="dot-admin"/>
+    <text x="108" y="210" class="item">системная диагностика</text>
+
+    <circle cx="90" cy="240" r="5" class="dot-admin"/>
+    <text x="108" y="246" class="item">доступ к административным разделам</text>
+
+    <circle cx="90" cy="276" r="5" class="dot-admin"/>
+    <text x="108" y="282" class="item">настройка общих параметров</text>
+  </g>
+
+  <g>
+    <rect x="520" y="44" width="410" height="272" rx="10" fill="#F8FAFC" stroke="#D1D5DB" stroke-width="1.8"/>
+    <rect x="520" y="44" width="8" height="272" rx="4" fill="#2563EB"/>
+    <text x="552" y="92" class="role">Пользователь</text>
+    <rect x="790" y="66" width="104" height="30" rx="15" fill="#2563EB"/>
+    <text x="842" y="86" class="badge" text-anchor="middle">USER</text>
+
+    <circle cx="560" cy="132" r="5" class="dot-user"/>
+    <text x="578" y="138" class="item">свои сервисы и endpoint'ы</text>
+
+    <circle cx="560" cy="168" r="5" class="dot-user"/>
+    <text x="578" y="174" class="item">dashboard и карта архитектуры</text>
+
+    <circle cx="560" cy="204" r="5" class="dot-user"/>
+    <text x="578" y="210" class="item">инциденты и уведомления</text>
+
+    <circle cx="560" cy="240" r="5" class="dot-user"/>
+    <text x="578" y="246" class="item">отчеты за выбранный период</text>
+
+    <circle cx="560" cy="276" r="5" class="dot-user"/>
+    <text x="578" y="282" class="item">профиль и личные настройки</text>
+  </g>
+</svg>

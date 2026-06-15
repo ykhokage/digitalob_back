@@ -1,0 +1,98 @@
+<svg width="1080" height="360" viewBox="0 0 1080 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowYellow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M2 1L11 6L2 11Z" fill="#F2C300"/>
+    </marker>
+    <style>
+      .num {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 72px;
+        font-weight: 700;
+        fill: #F2C300;
+      }
+      .title {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        fill: #111827;
+      }
+      .text {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        fill: #4B5563;
+      }
+      .icon {
+        stroke: #111827;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        fill: none;
+      }
+    </style>
+  </defs>
+
+  <rect width="1080" height="360" fill="#FFFFFF"/>
+
+  <line x1="52" y1="58" x2="52" y2="300" stroke="#111827" stroke-width="2"/>
+  <line x1="306" y1="58" x2="306" y2="300" stroke="#111827" stroke-width="2"/>
+  <line x1="560" y1="58" x2="560" y2="300" stroke="#111827" stroke-width="2"/>
+  <line x1="814" y1="58" x2="814" y2="300" stroke="#111827" stroke-width="2"/>
+  <line x1="1030" y1="58" x2="1030" y2="300" stroke="#111827" stroke-width="2"/>
+
+  <path d="M286 178H314" stroke="#F2C300" stroke-width="7" marker-end="url(#arrowYellow)"/>
+  <path d="M540 178H568" stroke="#F2C300" stroke-width="7" marker-end="url(#arrowYellow)"/>
+  <path d="M794 178H822" stroke="#F2C300" stroke-width="7" marker-end="url(#arrowYellow)"/>
+
+  <g>
+    <text x="210" y="104" class="num">1</text>
+    <text x="86" y="148" class="title">Метрики</text>
+    <text x="86" y="182" class="text">числа во времени:</text>
+    <text x="86" y="204" class="text">uptime, latency,</text>
+    <text x="86" y="226" class="text">error rate</text>
+
+    <polyline points="102,272 124,250 146,260 170,230 194,242" class="icon"/>
+    <line x1="98" y1="278" x2="204" y2="278" class="icon"/>
+    <line x1="98" y1="238" x2="98" y2="278" class="icon"/>
+  </g>
+
+  <g>
+    <text x="462" y="104" class="num">2</text>
+    <text x="340" y="148" class="title">Логи</text>
+    <text x="340" y="182" class="text">события и сообщения</text>
+    <text x="340" y="204" class="text">приложения</text>
+
+    <rect x="358" y="238" width="72" height="52" rx="4" class="icon"/>
+    <line x1="372" y1="254" x2="416" y2="254" class="icon"/>
+    <line x1="372" y1="268" x2="410" y2="268" class="icon"/>
+    <line x1="372" y1="282" x2="400" y2="282" class="icon"/>
+  </g>
+
+  <g>
+    <text x="716" y="104" class="num">3</text>
+    <text x="594" y="148" class="title">Трассировки</text>
+    <text x="594" y="182" class="text">цепочки вызовов</text>
+    <text x="594" y="204" class="text">между сервисами</text>
+
+    <circle cx="620" cy="264" r="11" class="icon"/>
+    <circle cx="690" cy="238" r="11" class="icon"/>
+    <circle cx="704" cy="284" r="11" class="icon"/>
+    <line x1="631" y1="260" x2="679" y2="242" class="icon"/>
+    <line x1="631" y1="268" x2="693" y2="280" class="icon"/>
+  </g>
+
+  <g>
+    <text x="962" y="104" class="num">4</text>
+    <text x="848" y="148" class="title">Диагностика</text>
+    <text x="848" y="182" class="text">связь с сервисом,</text>
+    <text x="848" y="204" class="text">временем, причиной</text>
+    <text x="848" y="226" class="text">и влиянием</text>
+
+    <circle cx="904" cy="264" r="30" class="icon"/>
+    <circle cx="904" cy="264" r="12" class="icon"/>
+    <line x1="925" y1="285" x2="948" y2="308" class="icon"/>
+    <line x1="904" y1="222" x2="904" y2="234" class="icon"/>
+    <line x1="862" y1="264" x2="874" y2="264" class="icon"/>
+    <line x1="934" y1="264" x2="946" y2="264" class="icon"/>
+  </g>
+</svg>
